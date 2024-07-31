@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+@mixin btns {
+    padding: 12px 20px;
+    background-color: inherit;
+    color: rgba(112, 112, 112, 1);
+    border: none;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+header {
+    width: 85%;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: none;
+    &_lists {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+
+        &_select {
+            background-color: transparent;
+            border: none;
+            color: rgba(112, 112, 112, 1);
+            font-size: 17px;
+
+            &:hover {
+                color: rgba(60, 130, 244, 1);
+            }
+        }
+
+        &_link {
+            color: rgba(112, 112, 112, 1);
+
+            &:hover {
+                color: rgba(60, 130, 244, 1);
+            }
+        }
+    }
+}
+.nav_burger {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+}
+.nav_btns {
+    display: none;
+    &_login {
+        @include btns();
+        &:hover {
+            background-color: rgba(60, 130, 244, 1);
+            color: #fff;
+            border-radius: 10px;
+        }
+    }
+
+    &_signUp {
+        @include btns();
+        background-color: rgba(60, 130, 244, 1);
+        border-radius: 10px;
+        color: #fff;
+    }
+}
+@media (min-width: 786px) {
+    .nav{
+        display: block;
+    }
+}
+@media (min-width: 922px) {
+    .nav{
+        display: block;
+        &_btns{
+            display: block;
+        }
+        &_burger{
+            display: none;
+        }
+    }
+}
