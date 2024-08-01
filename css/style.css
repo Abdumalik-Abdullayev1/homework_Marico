@@ -22,6 +22,9 @@ header {
 .nav {
   display: none;
 }
+.nav_logo_img {
+  width: 80%;
+}
 .nav_lists {
   display: flex;
   gap: 20px;
@@ -57,25 +60,30 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 .nav_btns_login:hover {
   background-color: rgb(60, 130, 244);
   color: #fff;
-  border-radius: 10px;
 }
 .nav_btns_signUp {
   padding: 12px 20px;
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
-  background-color: rgb(60, 130, 244);
+  cursor: pointer;
   border-radius: 10px;
+  background-color: rgb(60, 130, 244);
   color: #fff;
 }
 
 @media (min-width: 786px) {
   .nav {
     display: block;
+  }
+  .nav_logo_img {
+    width: 100%;
   }
 }
 @media (min-width: 922px) {
@@ -122,8 +130,9 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
-  color: #fff;
+  cursor: pointer;
   border-radius: 10px;
+  color: #fff;
   background-color: rgb(60, 130, 244);
 }
 .hero_btns_demo {
@@ -131,11 +140,12 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 .hero_btns_demo:hover {
   background-color: rgb(60, 130, 244);
   color: #fff;
-  border-radius: 10px;
 }
 .hero_desc {
   text-align: center;
@@ -211,9 +221,10 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
+  cursor: pointer;
+  border-radius: 10px;
   margin-top: 20px;
   border: 1px solid;
-  border-radius: 10px;
 }
 .content_btn:hover {
   background-color: rgb(60, 130, 244);
@@ -246,8 +257,9 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
-  background-color: rgb(50, 108, 249);
+  cursor: pointer;
   border-radius: 10px;
+  background-color: rgb(50, 108, 249);
   color: #fff;
 }
 .homepage_btns_demo {
@@ -255,8 +267,9 @@ header {
   background-color: inherit;
   color: rgb(112, 112, 112);
   border: none;
-  border: 1px solid;
+  cursor: pointer;
   border-radius: 10px;
+  border: 1px solid;
 }
 .homepage_btns_demo:hover {
   background-color: rgb(60, 130, 244);
@@ -266,9 +279,41 @@ header {
 
 .actor_img {
   width: 100%;
+  padding-top: 10px;
+}
+.actor_img_oneLink {
+  padding-bottom: 10px;
+  width: 116%;
+}
+.actor_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.actor_btn_start {
+  padding: 12px 20px;
+  background-color: inherit;
+  color: rgb(112, 112, 112);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(50, 108, 249);
+  color: #fff;
+}
+.actor_btn_start:hover {
+  padding: 12px 20px;
+  background-color: inherit;
+  color: rgb(112, 112, 112);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid;
 }
 
 @media (min-width: 786px) {
+  .content_title_item {
+    font-size: 30px;
+  }
   .homepage {
     display: grid;
     grid-template-columns: auto 50%;
@@ -278,6 +323,12 @@ header {
   }
   .homepage_desc {
     font-size: 14px;
+  }
+  .actor_img {
+    padding: 0 0 0 10px;
+  }
+  .actor_img_oneLink {
+    padding: 0 10px 0 0;
   }
 }
 @media (min-width: 1200px) {
@@ -291,5 +342,90 @@ header {
   }
   .homepage_desc {
     font-size: 18px;
+  }
+}
+.experts_title {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.experts_card {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.experts_card_img {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 20px;
+  text-align: center;
+}
+.footer_title {
+  font-size: 35px;
+}
+.footer_logo {
+  width: 25%;
+}
+.footer_btn {
+  padding: 12px 20px;
+  background-color: inherit;
+  color: rgb(112, 112, 112);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(50, 108, 249);
+  color: #fff;
+}
+.footer_btn:hover {
+  padding: 12px 20px;
+  background-color: inherit;
+  color: rgb(112, 112, 112);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.footer_lists {
+  display: flex;
+  gap: 12px;
+}
+.footer_lists_link {
+  color: rgb(112, 112, 112);
+}
+.footer_lists_link:hover {
+  color: rgb(60, 130, 244);
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.company_logo_img {
+  width: 70%;
+}
+
+@media (min-width: 786px) {
+  .footer_logo {
+    width: 15%;
+  }
+  .footer_title {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer_logo {
+    width: 10%;
+  }
+  .footer_title {
+    font-size: 55px;
   }
 }

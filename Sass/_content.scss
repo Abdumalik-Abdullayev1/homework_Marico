@@ -1,0 +1,118 @@
+.content{
+    &_title{
+        color: #fff;
+        margin-top: 50px;
+        text-align: center;;
+        &_info{
+            margin-top: 20px;
+            text-align: center;
+        }    
+    }
+    &_btn{
+        @include btns();
+        margin-top: 20px;
+        border: 1px solid;
+        &:hover{
+            background-color: rgba(60, 130, 244, 1);
+            color: #fff;
+            border: none;
+        }
+    }
+}
+.homepage{
+    margin-top: 50px;
+    &_info{
+        color: #fff;
+        width: 100%;
+        &_title{
+            margin-top: 40px;
+            line-height: 40px;
+        }
+    }
+    &_desc{
+        margin-top: 20px;
+        line-height: 30px;
+    }
+    &_btns{
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        &_started{
+            @include btns();
+            background-color: rgba(50, 108, 249, 1);
+            color: #fff;    
+        }
+        &_demo{
+            @include btns();
+            border: 1px solid;
+            &:hover{
+                background-color: rgba(60, 130, 244, 1);
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
+.actor{
+    &_img{
+        width: 100%;
+        padding-top: 10px;
+        &_oneLink{
+            padding-bottom: 10px;
+            width: 116%;
+        }
+    }
+    &_btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        &_start{
+            @include btns();
+            background-color: rgba(50, 108, 249, 1);
+            color: #fff;
+            &:hover{
+                @include btns();
+                border: 1px solid;
+            }
+        }
+
+    }
+}
+@media (min-width: 786px) {
+    .content{
+        &_title_item{
+            font-size: 30px;
+        }
+    }
+    .homepage{
+        display: grid;
+        grid-template-columns: auto 50%;
+        &_info_title{
+            font-size: 30px;
+        }
+        &_desc{
+            font-size: 14px;
+        }
+    }
+    .actor{
+        &_img{
+            padding: 0 0 0 10px;
+        }
+        &_img_oneLink{
+            padding: 0 10px 0 0;   
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .homepage{
+        display: grid;
+        grid-template-columns: auto 50%;
+        &_info_title{
+            font-size: 45px;
+            line-height: 70px;
+        }
+        &_desc{
+            font-size: 18px;
+        }
+    }
+}

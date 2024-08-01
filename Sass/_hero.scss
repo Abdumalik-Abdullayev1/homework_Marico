@@ -32,17 +32,14 @@
         &_started {
             @include btns();
             color: #fff;
-            border-radius: 10px;
             background-color: rgba(60, 130, 244, 1);
         }
 
         &_demo {
             @include btns();
-
             &:hover {
                 background-color: rgba(60, 130, 244, 1);
                 color: #fff;
-                border-radius: 10px;
             }
         }
     }
